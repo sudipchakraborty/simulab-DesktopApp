@@ -1,0 +1,2131 @@
+{
+  "serial-monitor": {
+    "name": "Serial Monitor",
+    "description": "Wired firmware UART0 terminal; S3 uses a separate virtual guest CONSOLE link",
+    "pins": [
+      {
+        "id": "RX",
+        "label": "RX",
+        "electricalType": "input"
+      },
+      {
+        "id": "TX",
+        "label": "TX",
+        "electricalType": "output"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground"
+      },
+      {
+        "id": "CONSOLE",
+        "label": "CONSOLE (virtual S3)",
+        "electricalType": "virtual-console"
+      }
+    ],
+    "defaultProperties": {},
+    "kind": "serial-monitor",
+    "category": "Instrument"
+  },
+  "debugger": {
+    "name": "Debugger",
+    "description": "Virtual CPU attachment; actual AVR instruction registers and stepping, adapter-gated controls",
+    "pins": [
+      {
+        "id": "DEBUG",
+        "label": "DEBUG (virtual)",
+        "electricalType": "virtual-debug"
+      }
+    ],
+    "defaultProperties": {},
+    "kind": "debugger",
+    "category": "Instrument"
+  },
+  "ds3231": {
+    "name": "DS3231 RTC",
+    "description": "I2C RTC with BCD calendar, alarms and simulation-clock time",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "SDA",
+        "label": "SDA",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "SCL",
+        "label": "SCL",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "SQW",
+        "label": "SQW",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "32K",
+        "label": "32K",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "address": 104,
+      "epoch": "2026-01-01T00:00:00Z"
+    },
+    "kind": "ds3231",
+    "category": "Module"
+  },
+  "mux4067": {
+    "name": "16-channel multiplexer",
+    "description": "HC / B profiles; ideal bidirectional contacts with switching delay",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "S0",
+        "label": "S0",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "S1",
+        "label": "S1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "S2",
+        "label": "S2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "S3",
+        "label": "S3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "COM",
+        "label": "COM",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "EN",
+        "label": "EN",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C0",
+        "label": "C0",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C1",
+        "label": "C1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C2",
+        "label": "C2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C3",
+        "label": "C3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C4",
+        "label": "C4",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C5",
+        "label": "C5",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C6",
+        "label": "C6",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C7",
+        "label": "C7",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C8",
+        "label": "C8",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C9",
+        "label": "C9",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C10",
+        "label": "C10",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C11",
+        "label": "C11",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C12",
+        "label": "C12",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C13",
+        "label": "C13",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C14",
+        "label": "C14",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "C15",
+        "label": "C15",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "variant": "HC"
+    },
+    "kind": "mux4067",
+    "category": "Module"
+  },
+  "dc-motor": {
+    "name": "DC brushed motor",
+    "description": "Approximate winding, back-EMF, inertia and load; requires powered driver",
+    "pins": [
+      {
+        "id": "POS",
+        "label": "POS",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "NEG",
+        "label": "NEG",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "ratedVoltage": 6,
+      "ratedRpm": 6000,
+      "resistance": 3,
+      "inertia": 0.00001,
+      "load": 0,
+      "stalled": false
+    },
+    "kind": "dc-motor",
+    "category": "Actuator"
+  },
+  "ws2812": {
+    "name": "WS2812B RGB LED / strip",
+    "description": "GRB timed-edge decoding; Uno only until S3 edge callbacks exist",
+    "pins": [
+      {
+        "id": "VDD",
+        "label": "VDD",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "DIN",
+        "label": "DIN",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "DOUT",
+        "label": "DOUT",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "count": 1,
+      "brightness": 1
+    },
+    "kind": "ws2812",
+    "category": "Actuator"
+  },
+  "relay": {
+    "name": "5V relay module",
+    "description": "Powered driver module with isolated COM/NO/NC contacts",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "IN",
+        "label": "IN",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "COM",
+        "label": "COM",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "NO",
+        "label": "NO",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "NC",
+        "label": "NC",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "activeLow": true,
+      "logic3v3": false,
+      "delayUs": 10000,
+      "ratingV": 30,
+      "ratingA": 10
+    },
+    "kind": "relay",
+    "category": "Module"
+  },
+  "h-bridge": {
+    "name": "Ideal H-bridge driver",
+    "description": "Powered bidirectional motor driver; duty follows actual enable signal",
+    "pins": [
+      {
+        "id": "VM",
+        "label": "VM",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "IN1",
+        "label": "IN1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "IN2",
+        "label": "IN2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "EN",
+        "label": "EN",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "OUT1",
+        "label": "OUT1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "OUT2",
+        "label": "OUT2",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "maxCurrentA": 3
+    },
+    "kind": "h-bridge",
+    "category": "Module"
+  },
+  "voltmeter": {
+    "name": "DC voltmeter",
+    "description": "Ideal high-impedance differential probe; floating/conflict states explicit",
+    "pins": [
+      {
+        "id": "POS",
+        "label": "POS",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "NEG",
+        "label": "NEG",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "rangeV": 60
+    },
+    "kind": "voltmeter",
+    "category": "Meter"
+  },
+  "ammeter": {
+    "name": "DC ammeter",
+    "description": "Series shunt branch in bounded linear DC resistor solver; current positive POS to NEG",
+    "pins": [
+      {
+        "id": "POS",
+        "label": "POS",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "NEG",
+        "label": "NEG",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "shuntOhms": 0.1,
+      "rangeA": 10
+    },
+    "kind": "ammeter",
+    "category": "Meter"
+  },
+  "hx711": {
+    "name": "HX711 load-cell amplifier",
+    "description": "Clocked 24-bit signed samples with gain/channel selection; ideal scene stimulus",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "SCK",
+        "label": "SCK",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "DOUT",
+        "label": "DOUT",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "rawValue": 100000,
+      "rawValueB": 0,
+      "rateHz": 10
+    },
+    "kind": "hx711",
+    "category": "Sensor"
+  },
+  "dht22": {
+    "name": "DHT22 temperature / humidity",
+    "description": "Timed open-drain 40-bit frames; requires DATA pull-up; minimum 2 s read interval",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "DATA",
+        "label": "DATA",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "temperatureC": 24,
+      "humidityPct": 50
+    },
+    "kind": "dht22",
+    "category": "Sensor"
+  },
+  "stepper": {
+    "name": "Full-step stepper motor",
+    "description": "Four-terminal winding sequence; requires powered stepper driver",
+    "pins": [
+      {
+        "id": "A1",
+        "label": "A1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "A2",
+        "label": "A2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "B1",
+        "label": "B1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "B2",
+        "label": "B2",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "stepsPerTurn": 200
+    },
+    "kind": "stepper",
+    "category": "Actuator"
+  },
+  "stepper-driver": {
+    "name": "STEP/DIR stepper driver",
+    "description": "Integrated safe powered driver; active-low enable; ideal full-step coils",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "VM",
+        "label": "VM",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "STEP",
+        "label": "STEP",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "DIR",
+        "label": "DIR",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "EN",
+        "label": "EN",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "A1",
+        "label": "A1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "A2",
+        "label": "A2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "B1",
+        "label": "B1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "B2",
+        "label": "B2",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "stepsPerTurn": 200,
+      "maxStepHz": 10000
+    },
+    "kind": "stepper-driver",
+    "category": "Module"
+  },
+  "servo": {
+    "name": "PWM servo",
+    "description": "Powered integrated hobby servo; actual 1000..2000 us pulses command bounded angle",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "PWM",
+        "label": "PWM",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "minAngle": -90,
+      "maxAngle": 90,
+      "speedDegS": 180
+    },
+    "kind": "servo",
+    "category": "Actuator"
+  },
+  "tactile-switch": {
+    "name": "Tactile push switch",
+    "description": "Four leads: 1A/1B and 2A/2B are internally paired; press joins pairs",
+    "pins": [
+      {
+        "id": "1A",
+        "label": "1A",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "1B",
+        "label": "1B",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "2A",
+        "label": "2A",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "2B",
+        "label": "2B",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "pressed": false
+    },
+    "kind": "tactile-switch",
+    "category": "Connection"
+  },
+  "electromagnetic-switch": {
+    "name": "Electromagnetic switch",
+    "description": "Bare powered coil distinct from isolated COM/NO/NC contacts; use external driver",
+    "pins": [
+      {
+        "id": "COIL_POS",
+        "label": "COIL_POS",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "COIL_NEG",
+        "label": "COIL_NEG",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "COM",
+        "label": "COM",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "NO",
+        "label": "NO",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "NC",
+        "label": "NC",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "ratedVoltage": 5,
+      "resistanceOhms": 70,
+      "delayUs": 10000
+    },
+    "kind": "electromagnetic-switch",
+    "category": "Connection"
+  },
+  "arm-6dof": {
+    "name": "Generic 6DOF arm",
+    "description": "Approximate configurable educational kinematics with powered integrated servo drivers; no vendor USB/serial/CAD compatibility",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "J1",
+        "label": "J1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J2",
+        "label": "J2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J3",
+        "label": "J3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J4",
+        "label": "J4",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J5",
+        "label": "J5",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J6",
+        "label": "J6",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "link1Mm": 200,
+      "link2Mm": 160,
+      "speedDegS": 90
+    },
+    "kind": "arm-6dof",
+    "category": "Robotics"
+  },
+  "universal-arm": {
+    "name": "Generic Universal-style arm",
+    "description": "Approximate configurable educational kinematics with powered integrated servo drivers; no vendor USB/serial/CAD compatibility",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "J1",
+        "label": "J1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J2",
+        "label": "J2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J3",
+        "label": "J3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J4",
+        "label": "J4",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J5",
+        "label": "J5",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J6",
+        "label": "J6",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "link1Mm": 250,
+      "link2Mm": 220,
+      "speedDegS": 90
+    },
+    "kind": "universal-arm",
+    "category": "Robotics"
+  },
+  "dobot-magician": {
+    "name": "Dobot Magician educational profile",
+    "description": "Approximate configurable educational kinematics with powered integrated servo drivers; no vendor USB/serial/CAD compatibility",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "J1",
+        "label": "J1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J2",
+        "label": "J2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J3",
+        "label": "J3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J4",
+        "label": "J4",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "link1Mm": 135,
+      "link2Mm": 147,
+      "speedDegS": 90
+    },
+    "kind": "dobot-magician",
+    "category": "Robotics"
+  },
+  "uarm-metal": {
+    "name": "uArm Metal educational profile",
+    "description": "Approximate configurable educational kinematics with powered integrated servo drivers; no vendor USB/serial/CAD compatibility",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "J1",
+        "label": "J1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J2",
+        "label": "J2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J3",
+        "label": "J3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "J4",
+        "label": "J4",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "link1Mm": 148,
+      "link2Mm": 160,
+      "speedDegS": 90
+    },
+    "kind": "uarm-metal",
+    "category": "Robotics"
+  },
+  "conveyor": {
+    "name": "Conveyor assembly",
+    "description": "Powered integrated bidirectional driver; ideal no-slip belt motion",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "VM",
+        "label": "VM",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "EN",
+        "label": "EN",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "IN1",
+        "label": "IN1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "IN2",
+        "label": "IN2",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "speedMps": 0.2,
+      "trackM": 0.2
+    },
+    "kind": "conveyor",
+    "category": "Robotics"
+  },
+  "robotic-car": {
+    "name": "Four-wheel robotic car",
+    "description": "Powered left/right integrated H-bridges; deterministic differential drive",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "VM",
+        "label": "VM",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "EN",
+        "label": "EN",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "IN1",
+        "label": "IN1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "IN2",
+        "label": "IN2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "IN3",
+        "label": "IN3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "IN4",
+        "label": "IN4",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "speedMps": 0.5,
+      "trackM": 0.18
+    },
+    "kind": "robotic-car",
+    "category": "Robotics"
+  },
+  "ir-emitter": {
+    "name": "IR emitter module",
+    "description": "Powered switched optical source; paired channel and explicit scene geometry",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "IN",
+        "label": "IN",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "channel": "beam-1",
+      "xM": 0,
+      "yM": 0,
+      "rangeM": 1
+    },
+    "kind": "ir-emitter",
+    "category": "Actuator"
+  },
+  "ir-detector": {
+    "name": "IR detector module",
+    "description": "Powered active-low digital detector; matching optical channel, range and obstruction",
+    "pins": [
+      {
+        "id": "VCC",
+        "label": "VCC",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground-input"
+      },
+      {
+        "id": "OUT",
+        "label": "OUT",
+        "electricalType": "bidirectional"
+      }
+    ],
+    "defaultProperties": {
+      "channel": "beam-1",
+      "xM": 0.5,
+      "yM": 0,
+      "rangeM": 1,
+      "blocked": false
+    },
+    "kind": "ir-detector",
+    "category": "Sensor"
+  },
+  "nano": {
+    "name": "Arduino Nano classic",
+    "description": "ATmega328P 16 MHz; A6/A7 ADC-only, analog conversion not implemented",
+    "pins": [
+      {
+        "id": "D0",
+        "label": "D0",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D1",
+        "label": "D1",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D2",
+        "label": "D2",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D3",
+        "label": "D3",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D4",
+        "label": "D4",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D5",
+        "label": "D5",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D6",
+        "label": "D6",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D7",
+        "label": "D7",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D8",
+        "label": "D8",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D9",
+        "label": "D9",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D10",
+        "label": "D10",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D11",
+        "label": "D11",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D12",
+        "label": "D12",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D13",
+        "label": "D13",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "A0",
+        "label": "A0",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A1",
+        "label": "A1",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A2",
+        "label": "A2",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A3",
+        "label": "A3",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A4",
+        "label": "A4",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A5",
+        "label": "A5",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A6",
+        "label": "A6",
+        "electricalType": "adc-only-unimplemented",
+        "digital": false
+      },
+      {
+        "id": "A7",
+        "label": "A7",
+        "electricalType": "adc-only-unimplemented",
+        "digital": false
+      },
+      {
+        "id": "5V",
+        "label": "5V",
+        "electricalType": "power",
+        "digital": false
+      },
+      {
+        "id": "3V3",
+        "label": "3V3",
+        "electricalType": "power",
+        "digital": false
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground",
+        "digital": false
+      },
+      {
+        "id": "VIN",
+        "label": "VIN",
+        "electricalType": "power-input",
+        "digital": false
+      },
+      {
+        "id": "RESET",
+        "label": "RESET",
+        "electricalType": "input",
+        "digital": false
+      },
+      {
+        "id": "AREF",
+        "label": "AREF",
+        "electricalType": "input",
+        "digital": false
+      },
+      {
+        "id": "DEBUG",
+        "label": "DEBUG (virtual)",
+        "electricalType": "virtual-debug"
+      }
+    ],
+    "defaultProperties": {
+      "clockHz": 16000000
+    },
+    "kind": "nano",
+    "category": "Microcontroller"
+  },
+  "mega2560": {
+    "name": "Arduino Mega 2560",
+    "description": "ATmega2560 16 MHz; native D0..53/A0..15; host requires separate Mega CPU profile",
+    "pins": [
+      {
+        "id": "D0",
+        "label": "D0",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D1",
+        "label": "D1",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D2",
+        "label": "D2",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D3",
+        "label": "D3",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D4",
+        "label": "D4",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D5",
+        "label": "D5",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D6",
+        "label": "D6",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D7",
+        "label": "D7",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D8",
+        "label": "D8",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D9",
+        "label": "D9",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D10",
+        "label": "D10",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D11",
+        "label": "D11",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D12",
+        "label": "D12",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D13",
+        "label": "D13",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D14",
+        "label": "D14",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D15",
+        "label": "D15",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D16",
+        "label": "D16",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D17",
+        "label": "D17",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D18",
+        "label": "D18",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D19",
+        "label": "D19",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D20",
+        "label": "D20",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D21",
+        "label": "D21",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D22",
+        "label": "D22",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D23",
+        "label": "D23",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D24",
+        "label": "D24",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D25",
+        "label": "D25",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D26",
+        "label": "D26",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D27",
+        "label": "D27",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D28",
+        "label": "D28",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D29",
+        "label": "D29",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D30",
+        "label": "D30",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D31",
+        "label": "D31",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D32",
+        "label": "D32",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D33",
+        "label": "D33",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D34",
+        "label": "D34",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D35",
+        "label": "D35",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D36",
+        "label": "D36",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D37",
+        "label": "D37",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D38",
+        "label": "D38",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D39",
+        "label": "D39",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D40",
+        "label": "D40",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D41",
+        "label": "D41",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D42",
+        "label": "D42",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D43",
+        "label": "D43",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D44",
+        "label": "D44",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D45",
+        "label": "D45",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D46",
+        "label": "D46",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D47",
+        "label": "D47",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D48",
+        "label": "D48",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D49",
+        "label": "D49",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D50",
+        "label": "D50",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D51",
+        "label": "D51",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D52",
+        "label": "D52",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "D53",
+        "label": "D53",
+        "electricalType": "bidirectional",
+        "digital": true
+      },
+      {
+        "id": "A0",
+        "label": "A0",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A1",
+        "label": "A1",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A2",
+        "label": "A2",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A3",
+        "label": "A3",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A4",
+        "label": "A4",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A5",
+        "label": "A5",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A6",
+        "label": "A6",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A7",
+        "label": "A7",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A8",
+        "label": "A8",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A9",
+        "label": "A9",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A10",
+        "label": "A10",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A11",
+        "label": "A11",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A12",
+        "label": "A12",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A13",
+        "label": "A13",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A14",
+        "label": "A14",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "A15",
+        "label": "A15",
+        "electricalType": "analog",
+        "digital": true
+      },
+      {
+        "id": "5V",
+        "label": "5V",
+        "electricalType": "power",
+        "digital": false
+      },
+      {
+        "id": "3V3",
+        "label": "3V3",
+        "electricalType": "power",
+        "digital": false
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground",
+        "digital": false
+      },
+      {
+        "id": "VIN",
+        "label": "VIN",
+        "electricalType": "power-input",
+        "digital": false
+      },
+      {
+        "id": "RESET",
+        "label": "RESET",
+        "electricalType": "input",
+        "digital": false
+      },
+      {
+        "id": "AREF",
+        "label": "AREF",
+        "electricalType": "input",
+        "digital": false
+      },
+      {
+        "id": "DEBUG",
+        "label": "DEBUG (virtual)",
+        "electricalType": "virtual-debug"
+      }
+    ],
+    "defaultProperties": {
+      "clockHz": 16000000
+    },
+    "kind": "mega2560",
+    "category": "Microcontroller"
+  },
+  "uno": {
+    "name": "Arduino Uno",
+    "description": "ATmega328P board / genuine AVR instruction execution",
+    "pins": [
+      {
+        "id": "D0",
+        "label": "D0",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D1",
+        "label": "D1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D2",
+        "label": "D2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D3",
+        "label": "D3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D4",
+        "label": "D4",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D5",
+        "label": "D5",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D6",
+        "label": "D6",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D7",
+        "label": "D7",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D8",
+        "label": "D8",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D9",
+        "label": "D9",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D10",
+        "label": "D10",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D11",
+        "label": "D11",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D12",
+        "label": "D12",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "D13",
+        "label": "D13",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "A0",
+        "label": "A0",
+        "electricalType": "analog"
+      },
+      {
+        "id": "A1",
+        "label": "A1",
+        "electricalType": "analog"
+      },
+      {
+        "id": "A2",
+        "label": "A2",
+        "electricalType": "analog"
+      },
+      {
+        "id": "A3",
+        "label": "A3",
+        "electricalType": "analog"
+      },
+      {
+        "id": "A4",
+        "label": "A4",
+        "electricalType": "analog"
+      },
+      {
+        "id": "A5",
+        "label": "A5",
+        "electricalType": "analog"
+      },
+      {
+        "id": "5V",
+        "label": "5V",
+        "electricalType": "power"
+      },
+      {
+        "id": "3V3",
+        "label": "3V3",
+        "electricalType": "power"
+      },
+      {
+        "id": "GND",
+        "label": "GND",
+        "electricalType": "ground"
+      },
+      {
+        "id": "VIN",
+        "label": "VIN",
+        "electricalType": "power-input"
+      },
+      {
+        "id": "RESET",
+        "label": "RESET",
+        "electricalType": "input"
+      },
+      {
+        "id": "AREF",
+        "label": "AREF",
+        "electricalType": "analog-reference"
+      },
+      {
+        "id": "DEBUG",
+        "label": "DEBUG (virtual)",
+        "electricalType": "virtual-debug"
+      }
+    ],
+    "defaultProperties": {
+      "clockHz": 16000000
+    },
+    "kind": "uno",
+    "category": "Microcontroller"
+  },
+  "yd-esp32-s3": {
+    "name": "YD-ESP32-S3-2022-V1.3",
+    "description": "44 physical pins / ESP32-S3 / exact revision and module marking require confirmation",
+    "pins": [
+      {
+        "id": "P1.1",
+        "label": "3V3",
+        "electricalType": "power"
+      },
+      {
+        "id": "P1.2",
+        "label": "3V3",
+        "electricalType": "power"
+      },
+      {
+        "id": "P1.3",
+        "label": "RST",
+        "electricalType": "input"
+      },
+      {
+        "id": "P1.4",
+        "label": "4",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.5",
+        "label": "5",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.6",
+        "label": "6",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.7",
+        "label": "7",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.8",
+        "label": "15",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.9",
+        "label": "16",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.10",
+        "label": "17",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.11",
+        "label": "18",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.12",
+        "label": "8",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.13",
+        "label": "3",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.14",
+        "label": "46",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.15",
+        "label": "9",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.16",
+        "label": "10",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.17",
+        "label": "11",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.18",
+        "label": "12",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.19",
+        "label": "13",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.20",
+        "label": "14",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P1.21",
+        "label": "5V",
+        "electricalType": "power"
+      },
+      {
+        "id": "P1.22",
+        "label": "G",
+        "electricalType": "ground"
+      },
+      {
+        "id": "P2.1",
+        "label": "G",
+        "electricalType": "ground"
+      },
+      {
+        "id": "P2.2",
+        "label": "TX",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.3",
+        "label": "RX",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.4",
+        "label": "1",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.5",
+        "label": "2",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.6",
+        "label": "42",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.7",
+        "label": "41",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.8",
+        "label": "40",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.9",
+        "label": "39",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.10",
+        "label": "38",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.11",
+        "label": "37",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.12",
+        "label": "36",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.13",
+        "label": "35",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.14",
+        "label": "0",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.15",
+        "label": "45",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.16",
+        "label": "48",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.17",
+        "label": "47",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.18",
+        "label": "21",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.19",
+        "label": "20",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.20",
+        "label": "19",
+        "electricalType": "bidirectional"
+      },
+      {
+        "id": "P2.21",
+        "label": "G",
+        "electricalType": "ground"
+      },
+      {
+        "id": "P2.22",
+        "label": "G",
+        "electricalType": "ground"
+      },
+      {
+        "id": "DEBUG",
+        "label": "DEBUG (virtual)",
+        "electricalType": "virtual-debug"
+      },
+      {
+        "id": "CONSOLE",
+        "label": "CONSOLE (virtual guest)",
+        "electricalType": "virtual-console"
+      }
+    ],
+    "defaultProperties": {
+      "memoryVariant": "unconfirmed",
+      "boardRevision": "2022-V1.3"
+    },
+    "kind": "yd-esp32-s3",
+    "category": "Microcontroller"
+  },
+  "led": {
+    "name": "LED",
+    "description": "Polarized indicator   A anode / K cathode",
+    "pins": [
+      {
+        "id": "A",
+        "label": "A",
+        "electricalType": "passive"
+      },
+      {
+        "id": "K",
+        "label": "K",
+        "electricalType": "passive"
+      }
+    ],
+    "defaultProperties": {
+      "color": "#ef6461"
+    },
+    "kind": "led",
+    "category": "Actuator"
+  },
+  "resistor": {
+    "name": "Resistor",
+    "description": "Linear DC resistor; bounded resistive network solution",
+    "pins": [
+      {
+        "id": "1",
+        "label": "1",
+        "electricalType": "passive"
+      },
+      {
+        "id": "2",
+        "label": "2",
+        "electricalType": "passive"
+      }
+    ],
+    "defaultProperties": {
+      "resistanceOhms": 220
+    },
+    "kind": "resistor",
+    "category": "Connection"
+  },
+  "switch": {
+    "name": "Push button",
+    "description": "Normally open switch / live digital contact input",
+    "pins": [
+      {
+        "id": "1",
+        "label": "1",
+        "electricalType": "passive"
+      },
+      {
+        "id": "2",
+        "label": "2",
+        "electricalType": "passive"
+      }
+    ],
+    "defaultProperties": {
+      "pressed": false
+    },
+    "kind": "switch",
+    "category": "Connection"
+  },
+  "junction": {
+    "name": "Junction",
+    "description": "Explicit shared electrical node",
+    "pins": [
+      {
+        "id": "J",
+        "label": "J",
+        "electricalType": "passive"
+      }
+    ],
+    "defaultProperties": {},
+    "kind": "junction",
+    "category": "Connection"
+  }
+}

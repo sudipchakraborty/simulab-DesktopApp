@@ -1,0 +1,139 @@
+{
+  "version": "1.0.0",
+  "circuit": {
+    "schemaVersion": "1.1.0",
+    "name": "YD ESP32-S3 GPIO4 lab",
+    "components": [
+      {
+        "id": "yd-1",
+        "kind": "yd-esp32-s3",
+        "label": "YD1",
+        "position": {
+          "x": 200,
+          "y": 0
+        },
+        "rotation": 0,
+        "properties": {
+          "memoryVariant": "unconfirmed",
+          "boardRevision": "2022-V1.3"
+        }
+      },
+      {
+        "id": "led-1",
+        "kind": "led",
+        "label": "LED1",
+        "position": {
+          "x": -170,
+          "y": 150
+        },
+        "rotation": 0,
+        "properties": {
+          "color": "#ef6461"
+        }
+      },
+      {
+        "id": "resistor-1",
+        "kind": "resistor",
+        "label": "R1",
+        "position": {
+          "x": -410,
+          "y": 150
+        },
+        "rotation": 0,
+        "properties": {
+          "resistanceOhms": 220
+        }
+      },
+      {
+        "id": "switch-1",
+        "kind": "switch",
+        "label": "SW1",
+        "position": {
+          "x": -200,
+          "y": 420
+        },
+        "rotation": 0,
+        "properties": {
+          "pressed": false
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "wire-1",
+        "from": {
+          "componentId": "yd-1",
+          "pinId": "P1.4"
+        },
+        "to": {
+          "componentId": "resistor-1",
+          "pinId": "1"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-2",
+        "from": {
+          "componentId": "resistor-1",
+          "pinId": "2"
+        },
+        "to": {
+          "componentId": "led-1",
+          "pinId": "A"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-3",
+        "from": {
+          "componentId": "led-1",
+          "pinId": "K"
+        },
+        "to": {
+          "componentId": "yd-1",
+          "pinId": "P1.22"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-4",
+        "from": {
+          "componentId": "yd-1",
+          "pinId": "P1.5"
+        },
+        "to": {
+          "componentId": "switch-1",
+          "pinId": "1"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-5",
+        "from": {
+          "componentId": "switch-1",
+          "pinId": "2"
+        },
+        "to": {
+          "componentId": "yd-1",
+          "pinId": "P2.22"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      }
+    ]
+  },
+  "board": "esp32s3",
+  "files": [
+    {
+      "name": "sketch.ino",
+      "content": "/** @brief ESP32-S3 simulator GPIO4 and Serial Blink demo.\n * @details Watch the GPIO4 pin square, or connect an external LED through a resistor.\n * Onboard RGB uses GPIO48; its RMT waveform visualization is unavailable in this simulator.\n */\nvoid setup() {\n  pinMode(4, OUTPUT);\n  Serial.begin(115200);\n}\n\nvoid loop() {\n  digitalWrite(4, HIGH);\n  Serial.println(\"GPIO4 HIGH\");\n  delay(500);\n  digitalWrite(4, LOW);\n  Serial.println(\"GPIO4 LOW\");\n  delay(500);\n}\n"
+    }
+  ],
+  "activeFile": "sketch.ino",
+  "activeTab": "hardware",
+  "breakpoints": {}
+}

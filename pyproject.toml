@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "simulab-desktop"
+version = "0.1.0"
+description = "Native modular Python circuit studio with real AVR and ESP32-S3 firmware execution"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["PySide6-Essentials>=6.8,<7"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "pytest-qt>=4.4", "build>=1"]
+
+[project.gui-scripts]
+simulab-desktop = "simulab_desktop.application:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+simulab_desktop = ["resources/**/*", "resources/*", "runtime/*", "compiler_runtime/*", "compiler_runtime/**/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+qt_api = "pyside6"
+addopts = "-ra"

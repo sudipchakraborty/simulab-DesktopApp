@@ -1,0 +1,14 @@
+* text=auto
+*.py text eol=lf
+*.mjs text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.ps1 text eol=crlf
+*.cmd text eol=crlf
+
+# Preserve imported byte hashes, firmware provenance, and upstream notices.
+src/simulab_desktop/resources/** -text whitespace=cr-at-eol
+src/simulab_desktop/compiler_runtime/** -text whitespace=cr-at-eol
+*.wasm binary
+*.bin binary

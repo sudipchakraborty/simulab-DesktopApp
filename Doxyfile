@@ -1,0 +1,15 @@
+PROJECT_NAME           = "SimuLab Desktop"
+OUTPUT_DIRECTORY       = artifacts/doxygen
+INPUT                  = src/simulab_desktop README.md docs/ARCHITECTURE.md
+RECURSIVE              = YES
+FILE_PATTERNS          = *.py *.mjs *.md
+EXTENSION_MAPPING      = mjs=JavaScript
+EXCLUDE_PATTERNS       = */resources/engine.mjs */resources/emulators/*
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+PYTHON_DOCSTRING       = NO
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+QUIET                  = YES
+WARN_IF_UNDOCUMENTED   = NO
+USE_MDFILE_AS_MAINPAGE  = README.md

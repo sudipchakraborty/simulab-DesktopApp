@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "circuit": {
+    "schemaVersion": "1.4.0",
+    "name": "Arduino Nano classic Blink",
+    "wires": [],
+    "components": [
+      {
+        "id": "mcu",
+        "kind": "nano",
+        "label": "Arduino Nano classic",
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "rotation": 0,
+        "properties": {
+          "clockHz": 16000000
+        }
+      }
+    ]
+  },
+  "board": "nano",
+  "files": [
+    {
+      "name": "sketch.ino",
+      "content": "/** @brief Blink the board's onboard D13 LED using real compiled Arduino firmware. */\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED_BUILTIN, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED_BUILTIN, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n"
+    }
+  ],
+  "activeFile": "sketch.ino",
+  "activeTab": "hardware",
+  "breakpoints": {}
+}

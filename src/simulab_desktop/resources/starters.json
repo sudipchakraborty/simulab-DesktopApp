@@ -1,0 +1,18 @@
+{
+  "uno": {
+    "board": "uno",
+    "content": "/** @brief Blink the board's onboard D13 LED using real compiled Arduino firmware. */\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED_BUILTIN, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED_BUILTIN, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n"
+  },
+  "nano": {
+    "board": "nano",
+    "content": "/** @brief Blink the board's onboard D13 LED using real compiled Arduino firmware. */\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED_BUILTIN, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED_BUILTIN, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n"
+  },
+  "mega2560": {
+    "board": "mega2560",
+    "content": "/** @brief Blink the board's onboard D13 LED using real compiled Arduino firmware. */\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED_BUILTIN, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED_BUILTIN, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n"
+  },
+  "yd-esp32-s3": {
+    "board": "esp32s3",
+    "content": "/** @brief ESP32-S3 simulator GPIO4 and Serial Blink demo.\n * @details Watch the GPIO4 pin square, or connect an external LED through a resistor.\n * Onboard RGB uses GPIO48; its RMT waveform visualization is unavailable in this simulator.\n */\nvoid setup() {\n  pinMode(4, OUTPUT);\n  Serial.begin(115200);\n}\n\nvoid loop() {\n  digitalWrite(4, HIGH);\n  Serial.println(\"GPIO4 HIGH\");\n  delay(500);\n  digitalWrite(4, LOW);\n  Serial.println(\"GPIO4 LOW\");\n  delay(500);\n}\n"
+  }
+}

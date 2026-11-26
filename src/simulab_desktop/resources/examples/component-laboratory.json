@@ -1,0 +1,513 @@
+{
+  "version": "1.0.0",
+  "circuit": {
+    "schemaVersion": "1.2.0",
+    "name": "Uno component laboratory",
+    "components": [
+      {
+        "id": "uno",
+        "kind": "uno",
+        "label": "Arduino Uno",
+        "position": {
+          "x": 40,
+          "y": 140
+        },
+        "rotation": 0,
+        "properties": {
+          "clockHz": 16000000
+        }
+      },
+      {
+        "id": "rtc",
+        "kind": "ds3231",
+        "label": "DS3231 RTC",
+        "position": {
+          "x": 440,
+          "y": 20
+        },
+        "rotation": 0,
+        "properties": {
+          "address": 104,
+          "epoch": "2026-01-01T00:00:00Z"
+        }
+      },
+      {
+        "id": "mux",
+        "kind": "mux4067",
+        "label": "16-channel multiplexer",
+        "position": {
+          "x": 440,
+          "y": 320
+        },
+        "rotation": 0,
+        "properties": {
+          "variant": "HC"
+        }
+      },
+      {
+        "id": "relay",
+        "kind": "relay",
+        "label": "5V relay module",
+        "position": {
+          "x": 760,
+          "y": 20
+        },
+        "rotation": 0,
+        "properties": {
+          "activeLow": true,
+          "logic3v3": false,
+          "delayUs": 10000,
+          "ratingV": 30,
+          "ratingA": 10
+        }
+      },
+      {
+        "id": "driver",
+        "kind": "h-bridge",
+        "label": "Ideal H-bridge driver",
+        "position": {
+          "x": 760,
+          "y": 320
+        },
+        "rotation": 0,
+        "properties": {
+          "maxCurrentA": 3
+        }
+      },
+      {
+        "id": "motor",
+        "kind": "dc-motor",
+        "label": "DC brushed motor",
+        "position": {
+          "x": 1080,
+          "y": 320
+        },
+        "rotation": 0,
+        "properties": {
+          "ratedVoltage": 6,
+          "ratedRpm": 6000,
+          "resistance": 3,
+          "inertia": 0.00001,
+          "load": 0,
+          "stalled": false
+        }
+      },
+      {
+        "id": "rgb",
+        "kind": "ws2812",
+        "label": "WS2812B RGB LED / strip",
+        "position": {
+          "x": 1080,
+          "y": 20
+        },
+        "rotation": 0,
+        "properties": {
+          "count": 1,
+          "brightness": 1
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "wire-1",
+        "from": {
+          "componentId": "uno",
+          "pinId": "5V"
+        },
+        "to": {
+          "componentId": "rtc",
+          "pinId": "VCC"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-2",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "rtc",
+          "pinId": "GND"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-3",
+        "from": {
+          "componentId": "uno",
+          "pinId": "5V"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "VCC"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-4",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "GND"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-5",
+        "from": {
+          "componentId": "uno",
+          "pinId": "5V"
+        },
+        "to": {
+          "componentId": "relay",
+          "pinId": "VCC"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-6",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "relay",
+          "pinId": "GND"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-7",
+        "from": {
+          "componentId": "uno",
+          "pinId": "5V"
+        },
+        "to": {
+          "componentId": "driver",
+          "pinId": "VCC"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-8",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "driver",
+          "pinId": "GND"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-9",
+        "from": {
+          "componentId": "uno",
+          "pinId": "5V"
+        },
+        "to": {
+          "componentId": "rgb",
+          "pinId": "VDD"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-10",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "rgb",
+          "pinId": "GND"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-11",
+        "from": {
+          "componentId": "uno",
+          "pinId": "A4"
+        },
+        "to": {
+          "componentId": "rtc",
+          "pinId": "SDA"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-12",
+        "from": {
+          "componentId": "uno",
+          "pinId": "A5"
+        },
+        "to": {
+          "componentId": "rtc",
+          "pinId": "SCL"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-13",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D8"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "S0"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-14",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D9"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "S1"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-15",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D10"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "S2"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-16",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D12"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "S3"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-17",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "EN"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-18",
+        "from": {
+          "componentId": "uno",
+          "pinId": "A0"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "COM"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-19",
+        "from": {
+          "componentId": "uno",
+          "pinId": "3V3"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "C0"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-20",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "mux",
+          "pinId": "C1"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-21",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D4"
+        },
+        "to": {
+          "componentId": "driver",
+          "pinId": "IN1"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-22",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D5"
+        },
+        "to": {
+          "componentId": "driver",
+          "pinId": "IN2"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-23",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D6"
+        },
+        "to": {
+          "componentId": "driver",
+          "pinId": "EN"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-24",
+        "from": {
+          "componentId": "uno",
+          "pinId": "5V"
+        },
+        "to": {
+          "componentId": "driver",
+          "pinId": "VM"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-25",
+        "from": {
+          "componentId": "driver",
+          "pinId": "OUT1"
+        },
+        "to": {
+          "componentId": "motor",
+          "pinId": "POS"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-26",
+        "from": {
+          "componentId": "driver",
+          "pinId": "OUT2"
+        },
+        "to": {
+          "componentId": "motor",
+          "pinId": "NEG"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-27",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D7"
+        },
+        "to": {
+          "componentId": "relay",
+          "pinId": "IN"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-28",
+        "from": {
+          "componentId": "uno",
+          "pinId": "GND"
+        },
+        "to": {
+          "componentId": "relay",
+          "pinId": "COM"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-29",
+        "from": {
+          "componentId": "relay",
+          "pinId": "NO"
+        },
+        "to": {
+          "componentId": "uno",
+          "pinId": "D2"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-30",
+        "from": {
+          "componentId": "uno",
+          "pinId": "D3"
+        },
+        "to": {
+          "componentId": "rgb",
+          "pinId": "DIN"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      }
+    ]
+  },
+  "board": "uno",
+  "files": [
+    {
+      "name": "sketch.ino",
+      "content": "// Requires Adafruit NeoPixel: install from the Code Editor component library menu.\n// Circuit: use \"Open component laboratory\" in the Hardware library.\n#include <Wire.h>\n#include <Adafruit_NeoPixel.h>\nAdafruit_NeoPixel rgb(1, 3, NEO_GRB + NEO_KHZ800);\nvoid setup() {\n  Serial.begin(9600); Wire.begin(); rgb.begin();\n  const int outputs[] = {4, 5, 6, 7, 8, 9, 10, 12};\n  for (int p : outputs) pinMode(p, OUTPUT);\n  pinMode(2, INPUT_PULLUP); pinMode(A0, INPUT);\n  digitalWrite(4, HIGH); digitalWrite(5, LOW); analogWrite(6, 128);\n  digitalWrite(8, LOW); digitalWrite(9, LOW); digitalWrite(10, LOW); digitalWrite(12, LOW);\n}\nvoid loop() {\n  static bool phase = false; phase = !phase;\n  digitalWrite(7, phase); // Active-low module: COM grounds NO when energized.\n  rgb.setPixelColor(0, phase ? rgb.Color(255,0,0) : rgb.Color(0,0,255)); rgb.show();\n  Wire.beginTransmission(0x68); Wire.write(0); Wire.endTransmission();\n  Wire.requestFrom(0x68, 3);\n  Serial.print(\"RTC BCD sec/min/hour:\");\n  while (Wire.available()) { Serial.print(' '); Serial.print(Wire.read(), HEX); }\n  Serial.print(\" relay input=\"); Serial.print(digitalRead(2));\n  Serial.print(\" mux digital input=\"); Serial.println(digitalRead(A0));\n  delay(500);\n}\n"
+    }
+  ],
+  "activeFile": "sketch.ino",
+  "activeTab": "hardware",
+  "breakpoints": {}
+}

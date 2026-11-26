@@ -1,0 +1,138 @@
+{
+  "version": "1.0.0",
+  "circuit": {
+    "schemaVersion": "1.0.0",
+    "name": "Untitled circuit",
+    "components": [
+      {
+        "id": "uno-1",
+        "kind": "uno",
+        "label": "Arduino Uno",
+        "position": {
+          "x": 80,
+          "y": 100
+        },
+        "rotation": 0,
+        "properties": {
+          "clockHz": 16000000
+        }
+      },
+      {
+        "id": "resistor-1",
+        "kind": "resistor",
+        "label": "R1",
+        "position": {
+          "x": 520,
+          "y": 80
+        },
+        "rotation": 0,
+        "properties": {
+          "resistanceOhms": 220
+        }
+      },
+      {
+        "id": "led-1",
+        "kind": "led",
+        "label": "LED1",
+        "position": {
+          "x": 780,
+          "y": 80
+        },
+        "rotation": 0,
+        "properties": {
+          "color": "#ef6461"
+        }
+      },
+      {
+        "id": "switch-1",
+        "kind": "switch",
+        "label": "SW1",
+        "position": {
+          "x": 520,
+          "y": 320
+        },
+        "rotation": 0,
+        "properties": {
+          "pressed": false
+        }
+      }
+    ],
+    "wires": [
+      {
+        "id": "wire-1",
+        "from": {
+          "componentId": "uno-1",
+          "pinId": "D13"
+        },
+        "to": {
+          "componentId": "resistor-1",
+          "pinId": "1"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-2",
+        "from": {
+          "componentId": "resistor-1",
+          "pinId": "2"
+        },
+        "to": {
+          "componentId": "led-1",
+          "pinId": "A"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-3",
+        "from": {
+          "componentId": "led-1",
+          "pinId": "K"
+        },
+        "to": {
+          "componentId": "uno-1",
+          "pinId": "GND"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-4",
+        "from": {
+          "componentId": "switch-1",
+          "pinId": "1"
+        },
+        "to": {
+          "componentId": "uno-1",
+          "pinId": "D2"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      },
+      {
+        "id": "wire-5",
+        "from": {
+          "componentId": "switch-1",
+          "pinId": "2"
+        },
+        "to": {
+          "componentId": "uno-1",
+          "pinId": "GND"
+        },
+        "color": "#5bbfa8",
+        "label": ""
+      }
+    ]
+  },
+  "board": "uno",
+  "files": [
+    {
+      "name": "sketch.ino",
+      "content": "/** @brief Blink the board's onboard D13 LED using real compiled Arduino firmware. */\nvoid setup() {\n  pinMode(LED_BUILTIN, OUTPUT);\n  Serial.begin(9600);\n}\n\nvoid loop() {\n  digitalWrite(LED_BUILTIN, HIGH);\n  Serial.println(\"LED ON\");\n  delay(500);\n  digitalWrite(LED_BUILTIN, LOW);\n  Serial.println(\"LED OFF\");\n  delay(500);\n}\n"
+    }
+  ],
+  "activeFile": "sketch.ino",
+  "activeTab": "hardware",
+  "breakpoints": {}
+}

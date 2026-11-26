@@ -1,0 +1,39 @@
+﻿{
+    "source_commit":  "21f28263086e4d08ca30209b28a1277c8a20c9b6",
+    "source_repository":  "simulab-backend",
+    "files":  [
+                  {
+                      "sha256":  "2370ddfd2600df460e14ffadb5e344bed1d6d98ac8b99c72a2b9befe88e07fbe",
+                      "path":  "service.mjs"
+                  },
+                  {
+                      "sha256":  "607c93ad6fc0047b47bac7db47469d4e041ca5d80ee27badb6f960b48c8b8afb",
+                      "path":  "runner.mjs"
+                  },
+                  {
+                      "sha256":  "6b4a733bc37e0b03bcee69c5d5e820ad5642895fd2219c852bcfbb11a0244e7e",
+                      "path":  "boards.mjs"
+                  },
+                  {
+                      "sha256":  "ead2bf3bb839e28f4230af35362e99946657b576e36023d9ce33acd418d5e5d1",
+                      "path":  "simulation-sessions.mjs"
+                  },
+                  {
+                      "sha256":  "ce1aecec72c3806e1f0d8f696efe29d07cdfcb8617cd1190ebc903c96cb1d765",
+                      "path":  "build-cache.mjs"
+                  },
+                  {
+                      "sha256":  "313cd6adcd3c2468b1b75c4a29adb1efed63d5936971a0de1aed60b22de4b33f",
+                      "path":  "compile-progress.mjs"
+                  },
+                  {
+                      "sha256":  "9838053fa8e98431bc215d46d5487a15b2f08e49f96e470a88c41c957651d468",
+                      "path":  "compiler-rpc.mjs"
+                  },
+                  {
+                      "sha256":  "f2364abffc4fe811173959af4eec97a6ebef45fa9690564ff1fa29705216cfca",
+                      "path":  "toolchain-fingerprint.mjs"
+                  }
+              ],
+    "copied_utc":  "2026-11-26T06:01:45.6045549Z"
+}

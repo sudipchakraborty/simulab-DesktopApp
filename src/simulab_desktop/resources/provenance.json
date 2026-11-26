@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "1.0.0",
+  "description": "Standalone imported SimuLab browser domain; no browser UI included",
+  "sources": {
+    "frontend": {
+      "commit": "6ce9a37fe67ac0e058a294291b3f895fcbd55d64",
+      "dirty": false
+    },
+    "engine": {
+      "commit": "50011a8a691dd5009c7333f95d2714b5f3bfd62c",
+      "dirty": false
+    }
+  },
+  "tools": {
+    "esbuild": "0.28.2"
+  },
+  "inputs": {
+    "engine/esp32/adapter.mjs": "88c4f15fc5384c0956b462c2a5420db2c11e5015720e29ef3ede886409dbd8be",
+    "engine/node_modules/avr8js/dist/cjs/cpu/cpu.js": "f2103091c3911989b568c0287424c1f18a71bb65a50bd784cb910b5997f00251",
+    "engine/node_modules/avr8js/dist/cjs/cpu/instruction.js": "a80cb750d6bab9b7ba64410280f9d87c2a9d70cb069a258091d74967b63a22b2",
+    "engine/node_modules/avr8js/dist/cjs/cpu/interrupt.js": "044fb4f21b1f2658c65852d2bf90b101b86aaefc6d2703fd80581e80b5096cde",
+    "engine/node_modules/avr8js/dist/cjs/index.js": "9059a0dc100b9a8eb876dc56012a7670f3afeefa82c90230862f686a5cba4fcf",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/adc.js": "9f13995cfea651e8dca14dc95c227c0a5fdb632f14e9e5d03ebc92d4ff62daec",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/clock.js": "dc344fb96d763d657cae4342b18d506edf6fbc939edc2ef0b45c4d53d3ee833d",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/eeprom.js": "526574ff48d75835c4413721c98487a55f4930eccb6794a63041ad0af05ee3a9",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/gpio.js": "34c59c337d7d8c5a6af959313d24e9fd41b7b3c1108d68a0963e4232f8ee8b29",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/spi.js": "f8b3a34dfebd697d94564461e9bbf06f992e8f4669f2a8460ede4af554e67309",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/timer-attiny.js": "11bc63d87d98644d4f97e9bafe681adceb7ccbd61975a931ac5500dd2ac8a8dc",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/timer.js": "5a4fa66fac3b6a401678aaa3e6a4b437985a3f14c89ff152d3c39a5d9ab920d2",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/twi.js": "8c9b3ff97dd10121ac8b1fcd09f98aaccc5f76068c0b2beff9a9ea945c0e6cd0",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/usart.js": "54417f9cab24659351e027a64acf3b2d0560365176ecf57c37184034c0e4cc35",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/usi.js": "2d5a13419a8537dc6fafa67214964158fa349f33cab4b94bd5a8eb7e6a82420c",
+    "engine/node_modules/avr8js/dist/cjs/peripherals/watchdog.js": "678c446a50283145dba396cf244142ac4ebbd1c8360a119396fc7a06dbcc1b63",
+    "engine/src/avrProfiles.ts": "c6da4afbc8166cb6f0d3426bcd02e4bb63bc5ed06df4f6e0f6a5cc49823aae94",
+    "engine/src/hex.ts": "eaaedf0fb9479e085c50807e68c1c1ecc452616e98753c9b0ffd3960f1f252e0",
+    "engine/src/index.ts": "4d99d86a4c5f08bfaa670965446e23a22da53305d3f1a8d47923712ee091c0f1",
+    "engine/src/mcu.ts": "e920e59af5eaf524b6ec5dc44fb060388c63f9ac8b1c68ae88ca53c4cca1d910",
+    "engine/src/opcodes.ts": "33479153c48ad17018ac03bd0df0fdfda6c6b279b2712a2374c60d84d378ee6c",
+    "engine/src/types.ts": "1164745fa221327e1cfdd982e7ea11f021e6a83869fa46f0aa1f8697711abd6a",
+    "engine/src/uno.ts": "a5d735af19651642506d0e1c1364abd148680cfb1b6452d7a6079d5168822be7",
+    "frontend/src/boards/yd-esp32-s3.json": "98958fa2070e03e1d7b994285c2baf1d1d45ec74687f9afde991fe9fcf0fa75a",
+    "frontend/src/boards/yd-esp32-s3.ts": "9675639486ea76ef18a52e408d099fa3d9bcecf2fb1a76d34a5036bb34654417",
+    "frontend/src/circuit/boardRegistry.ts": "a8f4f4fa4df561cc2ee98e583c9a1fbb9ba4bbd3cb982bae437de0ce00f85525",
+    "frontend/src/circuit/catalog.ts": "f18ec29f72721dbb23f5400982192c8655fc7300f1b33b913c7c355952153873",
+    "frontend/src/circuit/categories.ts": "4b1a563c0a2f6059ea2af9a20f1524807213a24590e78fd52a004472261380c4",
+    "frontend/src/circuit/components-example.ts": "8ecb26b52958995d4b71bda03d5d4600066c10745bc20b435236e5b14795c1bd",
+    "frontend/src/circuit/editing.ts": "b80aae82a33dc236bf4a133da26b1b9b120e8f3fa6533dd936e333bf4dc06d35",
+    "frontend/src/circuit/netlist.ts": "276cc43cc040f8d5370472db646119e905c5670c105e531266c354f810db1bfe",
+    "frontend/src/circuit/project.ts": "f0430dfb3b5203125e504c53dab585c7a8915cc37a334ccf8ba34978cc654356",
+    "frontend/src/circuit/yd-example.ts": "29136157a9e4f95fa63a6118a9f4101969c36456e0a4dcb7f31317af9ed5d06e",
+    "frontend/src/ide/boardStarter.ts": "491cc175ce2055e8e042447e97ee09a219f903c851841ca4d40a3ebdf818c0fc",
+    "frontend/src/ide/workspace.ts": "93adf9585fe3a7ba3f3f6b68400389f6e13b13e4255e32cb24cf4cfbf201913c",
+    "frontend/src/instruments/connections.ts": "8b1cd92ca9099b0ad7500982842f631610cbe0cbf8f7f811837e0b1ec4d1f12e",
+    "frontend/src/instruments/session.ts": "eaf089daecb7daac97327d2ccde99d344a8859ca8acc49599e009fa8e007f1c5",
+    "frontend/src/instruments/types.ts": "16e3f7eedc7b9f72bcedbc7ec8edeaed7c61f1dbfb769e9374beb80144a58b6f",
+    "frontend/src/models/circuitRuntime.ts": "d6b4bf5c2518199ef0d740639856f544ec6955095dce8a5f60069ace4df0c31d",
+    "frontend/src/models/contract.ts": "4c078f55fa279ff63ec97434d0e797dfdfdd10f94c49fd84df8fbf37cfadaced",
+    "frontend/src/models/dcSolver.ts": "6c4dbbb998fcc5654f0c8416e5cfadb346d60e97d634652bc43831c0f942e1d0",
+    "frontend/src/models/definitions.ts": "65423f16fa1c87275d151599a60f9e92b670f16a42fc54b25e6db854fc7da30a",
+    "frontend/src/models/ds3231.ts": "e899618d42ac79c9922aa09b7fa0d2637dc73b2b2f3daae9f0fcab5d3030fa4d",
+    "frontend/src/models/expandedDefinitions.ts": "31dc06c9193ec19db7240b800221b2f0f67eabefec4219bf73833244a2797d4d",
+    "frontend/src/models/factory.ts": "b0becd24aa3a1bbe5f95318d3ea5df2fe6ed2731908a6243567efbabbbc63b49",
+    "frontend/src/models/motor.ts": "f0e1ebc1432d542b21fae8706f60ce926d9e5e8631313e73aa5e60e3d0631f49",
+    "frontend/src/models/mux4067.ts": "4fe35a71f8132a079cba0294549f28f48029b332495deb7dad231e06a348ef34",
+    "frontend/src/models/parameters.ts": "a032613781e925c348fa3ff0747217dbad2db289bc6d41bffc81bcbf43787e56",
+    "frontend/src/models/relay.ts": "6db6abf06ddde9844051c84a13b178c76ae1d25d50765f0ceee4a6accff529b7",
+    "frontend/src/models/robotics.ts": "a4e64a6be6d2cb12bc9f39e8d069b6faea278cbab98bb11c05057adcd01ed02e",
+    "frontend/src/models/sensors.ts": "ae4dbdddb136c91d57f9c7a08050864405150057279f6670f9226d56c4a74b87",
+    "frontend/src/models/ws2812.ts": "0c1e73a2ec4cc8eccf957f55175a23343519cf627d79285d0f1388a0eaf5d85c",
+    "frontend/src/simulation/buttonInputs.ts": "601905df7c8ac6d6187e1218397d3b84553673e89f0400a9deef03b05e3be4b4",
+    "frontend/src/simulation/controllerPinStates.ts": "40b9dcdd794f0e4834bae58704d49d34a674efc3951889226c2bc6ae52475d32",
+    "frontend/src/simulation/projection.ts": "768fbbf2a9fe6293c4924c95a5f7a875a4f1091b8355516923a73b6770dbfa28",
+    "frontend/src/simulation/targets.ts": "a8b1b5cc3038c14d9d4477178afd048099aa83113877e285fb0dd7b5078d7ae6"
+  },
+  "files": {
+    "catalog.json": {
+      "bytes": 46105,
+      "sha256": "9a38758a600fdedb3c1c145e47d04ef7a3fa4d7b6f2d6c6684dd5e271b399819"
+    },
+    "emulators/esp-emu-0.51.0/asset-manifest.json": {
+      "bytes": 2231,
+      "sha256": "70705dab47f17c582a7168d16c27b8e1d6b012542b17ee9474635a5ed0e509d0"
+    },
+    "emulators/esp-emu-0.51.0/esp_emu_bg.wasm": {
+      "bytes": 4940328,
+      "sha256": "e72a6b02619ab6ed7e2347114cb2e2d497e9ac695a0300a4117dcda02d2fba0b"
+    },
+    "emulators/esp-emu-0.51.0/esp_emu.js": {
+      "bytes": 23082,
+      "sha256": "20ea33a0d75e7ee781356d7886ac0ce9e757da0d16ca57b26398c6663ec827d3"
+    },
+    "emulators/esp-emu-0.51.0/LICENSE.txt": {
+      "bytes": 11234,
+      "sha256": "2479c504896f5ab5ec061a0faf44ddb18411694ec69bb6294c01cc0d619db3ed"
+    },
+    "emulators/esp-emu-0.51.0/package.json": {
+      "bytes": 18,
+      "sha256": "1239d4d885dcad42201a27ed9324f8f0f760b78700d8db9ced39a511cffe7eae"
+    },
+    "engine.mjs": {
+      "bytes": 302130,
+      "sha256": "c7851acfa64d46757adad5ad65198b886906ff6505fc016f37d4417ed0426f37"
+    },
+    "examples/component-laboratory.json": {
+      "bytes": 11509,
+      "sha256": "90061cae983a58997fcdd7763a2fcfd488173b805ffafcb1980c434e964c9396"
+    },
+    "examples/esp32s3-gpio4.json": {
+      "bytes": 3198,
+      "sha256": "f34c8aef865b44f1381ef29eeed8d3f1da9038575dc02d9b3bea6a5086e401f0"
+    },
+    "examples/mega2560-blink.json": {
+      "bytes": 940,
+      "sha256": "3e72a642b4a10f5c20001ab6cff3e6f39618796b4b7f5ddcf95bd1946bfaa8ea"
+    },
+    "examples/nano-blink.json": {
+      "bytes": 938,
+      "sha256": "0c61eb385f356d26d892f0021d2a25598ed959d80344ffa979910746aaa27ad0"
+    },
+    "examples/uno-blink.json": {
+      "bytes": 2994,
+      "sha256": "e00070e048fd8e6e4061bb47923bbe1ab361230e026155923c3654d024fe81ab"
+    },
+    "firmware/alternate-d12.hex": {
+      "bytes": 1147,
+      "sha256": "540f9c4a2d254203b785d82648bbd37fc74c03160c85b1c14a6358a899db0d74"
+    },
+    "firmware/blink-uart.hex": {
+      "bytes": 1147,
+      "sha256": "ed281611e1eb43d145095567adc25e563beaf9ca5e200c456c9966178412e087"
+    },
+    "firmware/esp32s3-reference.bin": {
+      "bytes": 1786704,
+      "sha256": "ab24eadfe3ef0e6ee38834d730e648def7cd82f3fa51ee0bbc59c29a6e1bd176"
+    },
+    "firmware/input-mirror.hex": {
+      "bytes": 443,
+      "sha256": "9d9cd7903d4c5c40199bca7c8ffaa583e8b9a38cd59159c0401b3901fe4672d7"
+    },
+    "firmware/mega2560-metadata.json": {
+      "bytes": 659,
+      "sha256": "d9b9809aeb2547eae1d85e57d23676e2b514a4c8b13c5d7493c369d524ef76bc"
+    },
+    "firmware/mega2560.hex": {
+      "bytes": 1495,
+      "sha256": "38760215da1adc7ef8707f3e683ab0b01ba19a7c30f946faff215449f0aeff63"
+    },
+    "firmware/metadata.json": {
+      "bytes": 4128,
+      "sha256": "db99f4ae74d7d5f52f76692926ee83d82d0ed8f7d4ca21876800de7ad5df9fd9"
+    },
+    "firmware/MICROPYTHON-LICENSE.txt": {
+      "bytes": 3419,
+      "sha256": "80d3459978572b5bbb1dd274a98b01a625aeff467588ad69cefdf7eb607c1306"
+    },
+    "licenses/AVR8JS-LICENSE.txt": {
+      "bytes": 1082,
+      "sha256": "71d092fa8944eb36ce929756f620ee5bf31f119d5f78a6941dc04d48f504177b"
+    },
+    "licenses/ESP-EMU-LICENSE.txt": {
+      "bytes": 11234,
+      "sha256": "2479c504896f5ab5ec061a0faf44ddb18411694ec69bb6294c01cc0d619db3ed"
+    },
+    "licenses/MICROPYTHON-LICENSE.txt": {
+      "bytes": 3419,
+      "sha256": "80d3459978572b5bbb1dd274a98b01a625aeff467588ad69cefdf7eb607c1306"
+    },
+    "licenses/THIRD_PARTY_NOTICES.md": {
+      "bytes": 2142,
+      "sha256": "a0465147a12fa77e4d3c822dc25889f121fb029b7be8c433caac4c56da9d78fb"
+    },
+    "licenses/upstream-assets.json": {
+      "bytes": 2231,
+      "sha256": "70705dab47f17c582a7168d16c27b8e1d6b012542b17ee9474635a5ed0e509d0"
+    },
+    "starters.json": {
+      "bytes": 1765,
+      "sha256": "7ff3b5295e789363a811da3ff1dde365a5b6d14204d8537ebd300a32021390bf"
+    }
+  },
+  "distributionLicense": "No project-wide SimuLab distribution license selected; preserve upstream notices"
+}
